@@ -18,7 +18,7 @@ class ConfirmQuizActivity : AppCompatActivity() {
         max_score_view.text = "Maximum Score Possible : " + quizInfo.maxQuizScore.toString()
 
         start_quiz_button.setOnClickListener {
-            val intent = Intent(this, QuizActivity::class.java)
+            val intent = Intent(this, Main2Activity::class.java)
             intent.putExtra("QuizStart", quizInfo)
             startActivity(intent)
         }

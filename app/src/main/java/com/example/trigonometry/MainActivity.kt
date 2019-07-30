@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, TrigonometryRatiosAndFuntions::class.java)
                     startActivity(intent)
                 }
+                "Addition and Subtraction Functions" -> {
+                    val intent = Intent(this, AdditionSubtractionFormulas::class.java)
+                    startActivity(intent)
+                }
+
             }
         }
     }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".TrigonometricRationsValues" android:id="@+id/linearLayout">
+
+<TextView android:layout_width="0dp" android:layout_height="60dp"
+          android:textSize="25sp"
+          android:text="Current Score : 0" android:gravity="end" android:paddingTop="10dp"
+          android:paddingRight="10dp"
+          android:id="@+id/score_view_add_sub" app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintBottom_toTopOf="@+id/pdf_view_add_sub_functions"
+          app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+<com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_view_add_sub_functions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/score_view_add_sub" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/add_sub_quiz" app:layout_constraintStart_toStartOf="parent"/>
+
+<Button android:layout_width="0dp" android:layout_height="50dp"
+        android:textSize="18sp"
+        android:text="Pop Quiz"
+        android:id="@+id/add_sub_quiz" app:layout_constraintTop_toBottomOf="@+id/pdf_view_add_sub_functions"
+        android:layout_marginBottom="1dp" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
