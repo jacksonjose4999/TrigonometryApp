@@ -1,11 +1,14 @@
-package com.example.trigonometry
+package com.example.trigopdfsclasses
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.trigonometry.ConfirmQuizActivity
+import com.example.trigonometry.QuizInfoClass
+import com.example.trigonometry.R
 import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.*
 
-class TrigonometryRatiosAndFuntions : AppCompatActivity() {
+class BasicTrigonometricFormulas : AppCompatActivity() {
     val quizName = "Trigonometry Ratios and Functions"
     val currQuizScore = 0
     val maxQuizScore = 15
@@ -18,7 +21,13 @@ class TrigonometryRatiosAndFuntions : AppCompatActivity() {
 
         ratios_and_functions_quiz.setOnClickListener {
             val intent = Intent(this, ConfirmQuizActivity::class.java)
-            intent.putExtra("QuizInfo",QuizInfoClass(quizName = quizName, currQuizScore = currQuizScore, maxQuizScore = maxQuizScore))
+            intent.putExtra("QuizInfo",
+                QuizInfoClass(
+                    quizName = quizName,
+                    currQuizScore = currQuizScore,
+                    maxQuizScore = maxQuizScore
+                )
+            )
             startActivity(intent)
         }
     }

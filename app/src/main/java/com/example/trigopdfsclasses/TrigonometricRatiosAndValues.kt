@@ -1,11 +1,14 @@
-package com.example.trigonometry
+package com.example.trigopdfsclasses
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.trigonometry.ConfirmQuizActivity
+import com.example.trigonometry.QuizInfoClass
+import com.example.trigonometry.R
 import kotlinx.android.synthetic.main.activity_trigonometric_rations_values.*
 
-class TrigonometricRationsValues : AppCompatActivity() {
+class TrigonometricRatiosAndValues : AppCompatActivity() {
 
     val currScore = 0
     val quizName = "Trigonometric Ratio's values"

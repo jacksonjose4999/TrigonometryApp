@@ -1,7 +1,8 @@
-package com.example.trigonometry
+package com.example.trigopdfsclasses
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.trigonometry.R
 import kotlinx.android.synthetic.main.activity_addition__sub_formulas.*
 
 class AdditionSubtractionFormulas : AppCompatActivity() {

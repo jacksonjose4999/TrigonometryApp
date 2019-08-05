@@ -16,6 +16,7 @@ class ShowResult : AppCompatActivity() {
 
     private var userAnswers = ArrayList<Int>()
     private val adapter = GroupAdapter<ViewHolder>()
+    private val totalScore = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
