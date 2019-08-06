@@ -10,7 +10,7 @@ class TrigonometricRatiosAndFunctions : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trigonometry_ratios_and_funtions)
-        pdf_view_ratios_functions.fromAsset("trigonometricratiosandfunctions.pdf").load()
+        pdf_view_ratios_functions.fromAsset("trigoratiosandfuncs.pdf").load()
 
 
     }

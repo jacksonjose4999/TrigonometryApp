@@ -8,7 +8,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main2.*
 
-class Main2Activity : AppCompatActivity() {
+class QuizActivity : AppCompatActivity() {
     val timeInMillis = 11000L
     var remainingtime: Long? = null
     var index = 0
@@ -18,7 +18,6 @@ class Main2Activity : AppCompatActivity() {
     var option2Selected = false
     var option3Selected = false
     var option4Selected = false
-
 
     companion object{
         var quiz: Quiz? = null
