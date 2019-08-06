@@ -11,7 +11,7 @@
             android:theme="@style/AppTheme">
         <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions">
         </activity>
-        <activity android:name=".Main2Activity">
+        <activity android:name=".QuizActivity">
         </activity>
         <activity android:name="com.example.trigopdfsclasses.AdditionSubtractionFormulas">
         </activity>
