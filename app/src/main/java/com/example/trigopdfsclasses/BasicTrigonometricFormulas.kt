@@ -9,7 +9,7 @@ import com.example.trigonometry.R
 import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.*
 
 class BasicTrigonometricFormulas : AppCompatActivity() {
-    val quizName = "Trigonometry Ratios and Functions"
+    val quizName = "Basic Trigonometric Formulas"
     val currQuizScore = 0
     val maxQuizScore = 15
 

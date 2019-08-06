@@ -24,7 +24,9 @@ class QuizActivity : AppCompatActivity() {
     }
 
     init {
-        quiz = Quiz("Trigonometric Ratio's values")
+        val quizInfoClass = ConfirmQuizActivity.quizName
+        Log.wtf("NullPointerIdiot", "$quizInfoClass")
+        quiz = Quiz(quizInfoClass)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -214,9 +216,22 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("Value of tan(90)", "1", "not defined", "-1", "-1",2))
                 questionsArray.add(Questions("Value of sin(30)", "1/2", "0", "1", "-1",1))
                 questionsArray.add(Questions("Value of cot(0)", "not defined", "0", "-1", "-1",1))
-                questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "-1",1))
-                questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "-1",2))
-                questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "1", "-1",1))
+                questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "-1",2))
+                questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "-1",1))
+                questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "2/√3", "-1",1))
+            }
+            "Basic Trigonometric Formulas" -> {
+                questionsArray.add(Questions("sin(x) * cosec(x) = 1", "0", "1","-1","1/2",2))
+
+
+            }
+            "Trigonometric ratios and functions" -> {
+                questionsArray.add(Questions("sin(x)","p/h","p/b","h/b","b/h",1))
+                questionsArray.add(Questions("cos(x)","p/h","p/b","h/b","b/h",4))
+                questionsArray.add(Questions("tan(x)","p/h","p/b","h/b","b/h",2))
+                questionsArray.add(Questions("cosec(x)","p/h","p/b","h/p","b/h",3))
+                questionsArray.add(Questions("sec(x)","p/h","p/b","h/b","b/h",3))
+                questionsArray.add(Questions("cot(x)","b/p","p/b","h/b","b/h",1))
             }
 
         }
