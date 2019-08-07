@@ -10,12 +10,21 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
         </activity>
         <activity android:name=".QuizActivity">
         </activity>
         <activity android:name="com.example.trigopdfsclasses.AdditionSubtractionFormulas">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
         </activity>
         <activity android:name=".ShowResult">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
         </activity>
         <activity android:name=".ConfirmQuizActivity">
             <meta-data
