@@ -9,6 +9,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name="com.example.trigopdfsclasses.Transformation">
+        </activity>
+        <activity android:name="com.example.trigopdfsclasses.DoubleTripleHalf">
+        </activity>
         <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
@@ -27,9 +31,6 @@
                     android:value=".MainActivity"/>
         </activity>
         <activity android:name=".ConfirmQuizActivity">
-            <meta-data
-                    android:name="android.support.PARENT_ACTIVITY"
-                    android:value=".MainActivity"/>
         </activity>
         <activity android:name="com.example.trigopdfsclasses.BasicTrigonometricFormulas">
             <meta-data

@@ -49,6 +49,16 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, conditionalIdentities::class.java)
                     startActivity(intent)
                 }
+                "Transformation Formulae" -> {
+                    val intent = Intent(this, DoubleTripleHalf::class.java)
+                    startActivity(intent)
+                }
+                "Double, Triple and Half Angle Formulae" -> {
+                    val intent = Intent(this, Transformation::class.java)
+                    startActivity(intent)
+                }
+
+
 
             }
         }
@@ -61,6 +71,8 @@ class MainActivity : AppCompatActivity() {
         adapter.add(ActivitiesItem("Addition and Subtraction Functions","The formulas with addition or subtraction in their angles"))
         adapter.add(ActivitiesItem("Trigonometric Ratios and general Values","Basic Trigonometric equations"))
         adapter.add(ActivitiesItem("Conditional Identities","The formulas with addition or subtraction in their angles"))
+        adapter.add(ActivitiesItem("Transformation Formulae", "Formulas to transform product into sum and vice versa"))
+        adapter.add(ActivitiesItem("Double, Triple and Half Angle Formulae", " Formulae to manipulate angles"))
     }
 
 

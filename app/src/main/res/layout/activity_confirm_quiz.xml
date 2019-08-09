@@ -7,6 +7,9 @@
         android:background="@drawable/numbers"
         android:layout_height="match_parent"
         tools:context=".ConfirmQuizActivity" android:id="@+id/linearLayout2">
+    <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
 
     <TextView
             android:text="Topic of Quiz"
