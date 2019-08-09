@@ -6,9 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_confirm_quiz.*
-import kotlinx.android.synthetic.main.toolbar.*
 
 class ConfirmQuizActivity : AppCompatActivity() {
     companion object{
