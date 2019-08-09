@@ -8,7 +8,6 @@ import android.util.Log
 import android.view.MenuItem
 import android.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_confirm_quiz.*
-import kotlinx.android.synthetic.main.activity_confirm_quiz.toolbar
 import kotlinx.android.synthetic.main.toolbar.*
 
 class ConfirmQuizActivity : AppCompatActivity() {
@@ -21,11 +20,6 @@ class ConfirmQuizActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirm_quiz)
 
-        val mToolbar = toolbar
-        setSupportActionBar(mToolbar as androidx.appcompat.widget.Toolbar?)
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
-        getSupportActionBar()?.setDisplayShowHomeEnabled(true)
-        getSupportActionBar()?.setTitle("MyTitle");
 
         val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
 
