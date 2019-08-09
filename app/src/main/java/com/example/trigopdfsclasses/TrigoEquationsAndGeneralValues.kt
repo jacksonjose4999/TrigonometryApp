@@ -21,7 +21,7 @@ class TrigoEquationsAndGeneralValues : AppCompatActivity() {
 
         ratios_and_functions_quiz.setOnClickListener {
             val intent = Intent(this, ConfirmQuizActivity::class.java)
-            val quizIntent = QuizInfoClass("Trigonometric ratios and functions",currScore,maxScore)
+            val quizIntent = QuizInfoClass(quizName,currScore,maxScore)
             intent.putExtra("QuizInfo",quizIntent)
             startActivity(intent)
         }

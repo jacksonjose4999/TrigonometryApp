@@ -57,9 +57,6 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, Transformation::class.java)
                     startActivity(intent)
                 }
-
-
-
             }
         }
     }
@@ -88,7 +85,5 @@ class ActivitiesItem(val title: String, val dis: String) : Item<ViewHolder>(){
         viewHolder.itemView.item_discrip.text = dis
 
     }
-
-
 }
 

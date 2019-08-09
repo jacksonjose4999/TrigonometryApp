@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.
 
 class conditionalIdentities : AppCompatActivity() {
     val currScore = 0
-    val quizName = "Trigonometric Ratio's and Functions"
+    val quizName = "Conditional Identities"
     val maxScore = 20
 
     override fun onCreate(savedInstanceState: Bundle?) {

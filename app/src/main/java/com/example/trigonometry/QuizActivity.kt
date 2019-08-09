@@ -223,7 +223,6 @@ class Quiz (quizName: String){
             "Basic Trigonometric Formulas" -> {
                 questionsArray.add(Questions("sin(x) * cosec(x) = 1", "0", "1","-1","1/2",2))
 
-
             }
             "Trigonometric ratios and functions" -> {
                 questionsArray.add(Questions("sin(x)","p/h","p/b","h/b","b/h",1))
@@ -232,6 +231,19 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("cosec(x)","p/h","p/b","h/p","b/h",3))
                 questionsArray.add(Questions("sec(x)","p/h","p/b","h/b","b/h",3))
                 questionsArray.add(Questions("cot(x)","b/p","p/b","h/b","b/h",1))
+            }
+            "Double Triple Half" -> {
+
+            }
+            "Transformation" -> {
+
+            }
+            "Conditional Identities" -> {
+                //Ishank
+            }
+            "Trigonometric Equations and general values" -> {
+                //Ishank
+
             }
 
         }
