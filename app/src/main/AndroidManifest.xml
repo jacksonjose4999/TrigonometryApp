@@ -36,6 +36,16 @@
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
+        <activity android:name="com.example.trigopdfsclasses.conditionalIdentities">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
+        </activity>
+        <activity android:name="com.example.trigopdfsclasses.TrigoEquationsAndGeneralValues">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
+        </activity>
         <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndValues">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"

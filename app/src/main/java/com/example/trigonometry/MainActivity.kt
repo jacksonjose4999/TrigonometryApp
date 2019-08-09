@@ -4,15 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.trigopdfsclasses.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.home_recycler_view_item.view.*
-import com.example.trigopdfsclasses.AdditionSubtractionFormulas
-import com.example.trigopdfsclasses.TrigonometricRatiosAndValues
-import com.example.trigopdfsclasses.BasicTrigonometricFormulas
-import com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,6 +41,14 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, AdditionSubtractionFormulas::class.java)
                     startActivity(intent)
                 }
+                "Trigonometric Ratios and general Values" -> {
+                    val intent = Intent(this, TrigoEquationsAndGeneralValues::class.java)
+                    startActivity(intent)
+                }
+                "Conditional Identities" -> {
+                    val intent = Intent(this, conditionalIdentities::class.java)
+                    startActivity(intent)
+                }
 
             }
         }
@@ -54,6 +59,8 @@ class MainActivity : AppCompatActivity() {
         adapter.add(ActivitiesItem("Values of Trigonometric Ratios","Table of Trigonometric Standard Angles"))
         adapter.add(ActivitiesItem("Basic Trigonometric Functions", "Basic definitions"))
         adapter.add(ActivitiesItem("Addition and Subtraction Functions","The formulas with addition or subtraction in their angles"))
+        adapter.add(ActivitiesItem("Trigonometric Ratios and general Values","Basic Trigonometric equations"))
+        adapter.add(ActivitiesItem("Conditional Identities","The formulas with addition or subtraction in their angles"))
     }
 
 

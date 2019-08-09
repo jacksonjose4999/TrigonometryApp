@@ -4,4 +4,4 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-class QuizInfoClass (val quizName : String, val currQuizScore : Int, val maxQuizScore : Int) : Parcelable
+class QuizInfoClass (val quizName : String, var currQuizScore : Int, val maxQuizScore : Int) : Parcelable
