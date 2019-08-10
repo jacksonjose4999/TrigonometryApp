@@ -130,7 +130,7 @@ class QuizActivity : AppCompatActivity() {
             option_2.text = questions.op2
             option_3.text = questions.op3
             option_4.text = questions.op4
-        
+
 
 
         startCountDown(quiz)
@@ -175,6 +175,7 @@ class QuizActivity : AppCompatActivity() {
             k++
         }
         startActivity(Intent(this, ShowResult::class.java).putIntegerArrayListExtra("resultOfQuiz",userAnwers))
+        finish()
     }
 
     private fun storeAnswer(){
