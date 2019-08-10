@@ -240,10 +240,17 @@ class Quiz (quizName: String){
             }
             "Conditional Identities" -> {
                 //Ishank
+                
             }
             "Trigonometric Equations and general values" -> {
                 //Ishank
-
+                questionsArray.add(Questions("If 0 <t< 2π such that sin(t) = √2/2 and cot(t)<0,then t=?","π/4","3π/4","5π/4","7π/4",2))
+                questionsArray.add(Questions("If 0 <t< 2π and sin(t) = -1, then t=","π/2","3π/2","5π/4","π",2))
+                questionsArray.add(Questions("If 0 <α< π and cos(α) = -√3/2, then α =","π/6","-π/6","5π/6","7π/6",3))
+                questionsArray.add(Questions("If -2π <t< 0 and sin(t) = -1/2, then t =","-5π/6","-7π/6","-5π/4","-5π/3",1))
+                questionsArray.add(Questions("Find all angles θ such that -2π <θ< 2π and cos(θ) = √2/2","{-7π/4, -π/4 , π/4 , 7π/4}","{-π/4, -3π/4 , π/4 , 3π/4}","{-5π/4, π/4 , 3π/4}","{π/4, 3π/4}",1))
+                questionsArray.add(Questions("Find all values of t such that sin(t) = 0","t = kπ/2 ; k = 0","t = kπ/4 ; k = 0","t = kπ ; k = 0","t = 2kπ ; k = 0",3))
+                questionsArray.add(Questions("Find all values of t such that cos(πt) = 1","t = 2kπ ; k = 0","t = 2k ; k = 0","t = k ; k = 0","t = kπ ; k = 0",2))
             }
 
         }
