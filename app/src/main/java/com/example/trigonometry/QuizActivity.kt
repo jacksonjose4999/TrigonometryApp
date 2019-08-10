@@ -122,10 +122,7 @@ class QuizActivity : AppCompatActivity() {
         }
         setAllToFalse(0)
 
-        if (quizQ?.quizName.equals("Conditional Identities")){
 
-        }
-        else {
             var questions = quiz[index]
             question_no_view.text = "Question No: " + (index + 1) + "/$noOfQuestions"
             question_display_quiz.text = questions.ques
@@ -133,7 +130,7 @@ class QuizActivity : AppCompatActivity() {
             option_2.text = questions.op2
             option_3.text = questions.op3
             option_4.text = questions.op4
-        }
+        
 
 
         startCountDown(quiz)
