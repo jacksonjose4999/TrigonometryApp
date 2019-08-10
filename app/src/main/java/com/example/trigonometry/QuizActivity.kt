@@ -20,12 +20,14 @@ class QuizActivity : AppCompatActivity() {
 
     companion object{
         var quizQ: Quiz? = null
+        var noOfQuestions : Int? = null
     }
 
     init {
         val quizInfoClass = ConfirmQuizActivity.quizName
         Log.wtf("NullPointerIdiot", "$quizInfoClass")
         quizQ = Quiz(quizInfoClass)
+        noOfQuestions = quizQ!!.questionsArray.size;
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -125,7 +127,7 @@ class QuizActivity : AppCompatActivity() {
         }
         else {
             var questions = quiz[index]
-            question_no_view.text = "Question No: " + (index + 1)
+            question_no_view.text = "Question No: " + (index + 1) + "/$noOfQuestions"
             question_display_quiz.text = questions.ques
             option_1.text = questions.op1
             option_2.text = questions.op2
@@ -255,7 +257,6 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("cos(3A) = ", "4cos^3 + 3cos(A)", "3cos - 4cos^3(A)", "4cos^3 - 3cos(A)", "4cos^3 - 3sin(A)",3))
                 questionsArray.add(Questions("tan(3A) = ", "(tan(A) - 3tan^3(A))/(1-tan^2(A)", "(3tan(A) + tan^3(A))/(1-3tan^2(A)", "(3tan(A) - tan^3(A))/(1+3tan^2(A)", "(3tan(A) - tan^3(A))/(1-3tan^2(A)", 4))
             }
-
 
             "Transformation" -> {
         questionsArray.add(Questions("2sin(A)cos(B) = ","sin(A+B) - sin(A-B)","sin(A-B) + sin(A-B)","sin(A+B) + sin(A+B)","sin(A+B) + sin(A-B)",4))
