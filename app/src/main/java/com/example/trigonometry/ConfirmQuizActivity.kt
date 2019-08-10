@@ -1,6 +1,5 @@
 package com.example.trigonometry
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,7 +12,6 @@ class ConfirmQuizActivity : AppCompatActivity() {
         var quizName = ""
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirm_quiz)
@@ -21,10 +19,6 @@ class ConfirmQuizActivity : AppCompatActivity() {
 
         val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
 
-        if(quizInfo.quizName == "Conditional Identities")
-            quizInfo.currQuizScore = 12
-        else
-            quizInfo.currQuizScore = 0
 
         quiz_topic_view.text = quizInfo.quizName
         current_score_view.text = "Current Score : " + quizInfo.currQuizScore.toString()
@@ -34,7 +28,6 @@ class ConfirmQuizActivity : AppCompatActivity() {
             //val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
             val string = quizInfo.quizName
             intent.putExtra("QuizAct", string)
-            Log.wtf("NullPointerIdiot", "value putted ${string}")
             quizName = string
             startActivity(intent)
         }

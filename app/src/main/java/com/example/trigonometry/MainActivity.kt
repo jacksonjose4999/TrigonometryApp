@@ -50,11 +50,11 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 "Transformation Formulae" -> {
-                    val intent = Intent(this, DoubleTripleHalf::class.java)
+                    val intent = Intent(this, Transformation::class.java)
                     startActivity(intent)
                 }
                 "Double, Triple and Half Angle Formulae" -> {
-                    val intent = Intent(this, Transformation::class.java)
+                    val intent = Intent(this, DoubleTripleHalf::class.java)
                     startActivity(intent)
                 }
             }

@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.trigonometry.QuizActivity.Companion.quiz
+import com.example.trigonometry.QuizActivity.Companion.quizQ
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
@@ -53,15 +53,15 @@ class ShowResult : AppCompatActivity() {
 
         override fun bind(viewHolder: ViewHolder, position: Int) {
             val yourAnswerText = "Your Answer: "
-            viewHolder.itemView.question_view_result_item.text = quiz!!.questionsArray[index].ques
+            viewHolder.itemView.question_view_result_item.text = quizQ!!.questionsArray[index].ques
             when (userAnswer) {
-                1 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quiz!!.questionsArray[index].op1
-                2 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quiz!!.questionsArray[index].op2
-                3 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quiz!!.questionsArray[index].op3
-                4 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quiz!!.questionsArray[index].op4
+                1 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op1
+                2 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op2
+                3 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op3
+                4 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op4
                 0 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+"No answer selected"
             }
-            if (userAnswer == quiz!!.questionsArray[index].ans){
+            if (userAnswer == quizQ!!.questionsArray[index].ans){
                 viewHolder.itemView.your_answer_result.setBackgroundColor(Color.GREEN)
             }
             else{
@@ -70,10 +70,10 @@ class ShowResult : AppCompatActivity() {
             val correctAnswerText = "Correct Answer: "
 
             when {
-                quiz!!.questionsArray[index].ans == 1 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quiz!!.questionsArray[index].op1
-                quiz!!.questionsArray[index].ans == 2 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quiz!!.questionsArray[index].op2
-                quiz!!.questionsArray[index].ans == 3 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quiz!!.questionsArray[index].op3
-                quiz!!.questionsArray[index].ans == 4 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quiz!!.questionsArray[index].op3
+                quizQ!!.questionsArray[index].ans == 1 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op1
+                quizQ!!.questionsArray[index].ans == 2 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op2
+                quizQ!!.questionsArray[index].ans == 3 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op3
+                quizQ!!.questionsArray[index].ans == 4 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op3
             }
             viewHolder.itemView.correct_answer_text_view.setBackgroundColor(Color.GREEN)
 

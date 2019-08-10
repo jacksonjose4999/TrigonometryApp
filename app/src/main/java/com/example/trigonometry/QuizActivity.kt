@@ -1,7 +1,6 @@
 package com.example.trigonometry
 
 import android.content.Intent
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -20,13 +19,13 @@ class QuizActivity : AppCompatActivity() {
     var option4Selected = false
 
     companion object{
-        var quiz: Quiz? = null
+        var quizQ: Quiz? = null
     }
 
     init {
         val quizInfoClass = ConfirmQuizActivity.quizName
         Log.wtf("NullPointerIdiot", "$quizInfoClass")
-        quiz = Quiz(quizInfoClass)
+        quizQ = Quiz(quizInfoClass)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,13 +33,12 @@ class QuizActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
         setOnClickListeners()
 
-        startQuiz(quiz!!.questionsArray)
+        startQuiz(quizQ!!.questionsArray)
     }
 
     private fun startQuiz(quiz : ArrayList<Questions>){
 
         loadQuestion(quiz)
-
         question_next_button.setOnClickListener {
             storeAnswer()
             countDownTimer?.cancel()
@@ -117,19 +115,23 @@ class QuizActivity : AppCompatActivity() {
         if  (index == quiz.size){
             storeAnswer()
             displayResult()
-            Log.wtf("TAGGG","index is $index and quiz size is ${quiz.size}")
+            Log.wtf("TAGGG","index is $index and quizQ size is ${quiz.size}")
             return
         }
         setAllToFalse(0)
 
-        var questions = quiz[index]
-        question_no_view.text = "Question No: "+(index+1)
-        question_display_quiz.text = questions.ques
-        option_1.text = questions.op1
-        option_2.text = questions.op2
-        option_3.text = questions.op3
-        option_4.text = questions.op4
+        if (quizQ?.quizName.equals("Conditional Identities")){
 
+        }
+        else {
+            var questions = quiz[index]
+            question_no_view.text = "Question No: " + (index + 1)
+            question_display_quiz.text = questions.ques
+            option_1.text = questions.op1
+            option_2.text = questions.op2
+            option_3.text = questions.op3
+            option_4.text = questions.op4
+        }
 
 
         startCountDown(quiz)
@@ -209,8 +211,10 @@ class QuizActivity : AppCompatActivity() {
 
 class Quiz (quizName: String){
     var questionsArray = ArrayList<Questions>()
-
+    var imageQuestions = ArrayList<ImageQuestions>()
+    var quizName: String? = null
     init {
+        this.quizName = quizName
         when(quizName) {
             "Trigonometric Ratio's values" -> {
                 questionsArray.add(Questions("Value of sin(0)", "1", "0", "-1", "-1",2))
@@ -242,7 +246,6 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("cot(x)","b/p","p/b","h/b","b/h",1))
             }
             "Double Triple Half" -> {
-
                 questionsArray.add(Questions("sin(2A) = ","2sin(A)sin(A)","2cos(A)sin(A)","2cos(A)cos(A)","2sin(A)cosec(A)",2))
                 questionsArray.add(Questions("cos(2A) = ","sin^2(A) - cos^2(A)","1+cos^2(A)","cos^2(A) - sin^2(A)","1+2sin^2(A)",3))
                 questionsArray.add(Questions("tan(2A) = ", "2tan(A)/(1-tan^2(A)", "2tan(A)/(1+tan^2(A)", "tan(A)/(1-tan^2(A)", "tan(A)/(1+tan^2(A)",1))
@@ -251,22 +254,25 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("sin(3A) = ", "3sin(A) - 4 sin^3(A)", "4sin(A) - 3sin^3(A)", "3sin(A) + 4 sin^3(A)", "4sin(A) + 3 sin^3(A)",1))
                 questionsArray.add(Questions("cos(3A) = ", "4cos^3 + 3cos(A)", "3cos - 4cos^3(A)", "4cos^3 - 3cos(A)", "4cos^3 - 3sin(A)",3))
                 questionsArray.add(Questions("tan(3A) = ", "(tan(A) - 3tan^3(A))/(1-tan^2(A)", "(3tan(A) + tan^3(A))/(1-3tan^2(A)", "(3tan(A) - tan^3(A))/(1+3tan^2(A)", "(3tan(A) - tan^3(A))/(1-3tan^2(A)", 4))
-
             }
+
+
             "Transformation" -> {
-                questionsArray.add(Questions("2sin(A)cos(B) = ","sin(A+B) - sin(A-B)","sin(A-B) + sin(A-B)","sin(A+B) + sin(A+B)","sin(A+B) + sin(A-B)",4))
-                questionsArray.add(Questions("2cos(A)sin(B) = ", "sin(A+B) - sin(A-B)", "sin(A+B) + sin(A-B)", "sin(A-B) + sin(A-B)", "sin(A+B) + sin(A+B)", 1))
-                questionsArray.add(Questions("2cos(A)cos(B) = ", "sin(A+B) + cos(A-B)", "cos(A+B) + cos(A-B)", "sin(A+B) - cos(A-B)", "cos(A+B) - cos(A-B)",2))
-                questionsArray.add(Questions("2sin(A)sin(B) = ", "sin(A+B) - sin(A-B)", "sin(A+B) - cos(A-B)", "cos(A+B) - cos(A-B)", "cos(A+B) + cos(A-B)",3))
+        questionsArray.add(Questions("2sin(A)cos(B) = ","sin(A+B) - sin(A-B)","sin(A-B) + sin(A-B)","sin(A+B) + sin(A+B)","sin(A+B) + sin(A-B)",4))
+        questionsArray.add(Questions("2cos(A)sin(B) = ", "sin(A+B) - sin(A-B)", "sin(A+B) + sin(A-B)", "sin(A-B) + sin(A-B)", "sin(A+B) + sin(A+B)", 1))
+        questionsArray.add(Questions("2cos(A)cos(B) = ", "sin(A+B) + cos(A-B)", "cos(A+B) + cos(A-B)", "sin(A+B) - cos(A-B)", "cos(A+B) - cos(A-B)",2))
+        questionsArray.add(Questions("2sin(A)sin(B) = ", "sin(A+B) - sin(A-B)", "sin(A+B) - cos(A-B)", "cos(A+B) - cos(A-B)", "cos(A+B) + cos(A-B)",3))
 
-                questionsArray.add(Questions("sin(A) + sin(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","2sin((A+B)/2)cos((A-B)/2)",4))
-                questionsArray.add(Questions("sin(A) - sin(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","2sin((A+B)/2)cos((A-B)/2)",1))
-                questionsArray.add(Questions("cos(A) + cos(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2cos((A+B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A-B)/2)",3))
-                questionsArray.add(Questions("cos(A) - cos(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A+B)/2)sin((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","cos((A+B)/2)cos((A-B)/2)",2))
-            }
+        questionsArray.add(Questions("sin(A) + sin(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","2sin((A+B)/2)cos((A-B)/2)",4))
+        questionsArray.add(Questions("sin(A) - sin(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","2sin((A+B)/2)cos((A-B)/2)",1))
+        questionsArray.add(Questions("cos(A) + cos(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2cos((A+B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A-B)/2)",3))
+        questionsArray.add(Questions("cos(A) - cos(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A+B)/2)sin((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","cos((A+B)/2)cos((A-B)/2)",2))
+    }
+
+
             "Conditional Identities" -> {
-                //Ishank
-                
+
+
             }
             "Trigonometric Equations and general values" -> {
                 //Ishank
@@ -288,3 +294,4 @@ class Quiz (quizName: String){
 
 data class Questions (val ques : String, val op1 : String, val op2 : String, val op3 : String,val op4 : String, val ans : Int)
 
+data class ImageQuestions (val ques: Int, val op1: Int,val op2: Int, val op3: Int, val op4: Int, val ans : Int)
