@@ -271,6 +271,9 @@ class Quiz (quizName: String){
                 //Ishank
 
             }
+            "Addition and Subtraction" ->{
+                //Ishank
+            }
 
         }
     }
