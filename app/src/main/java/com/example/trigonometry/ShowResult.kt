@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trigonometry.QuizActivity.Companion.quizQ
 import com.xwray.groupie.GroupAdapter
@@ -42,6 +43,19 @@ class ShowResult : AppCompatActivity() {
         }
       //  adapter.add(FinalScoreItem())
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        val id = item.getItemId()
+
+        // click on icon to go back
+        //triangle icon on the main android toolbar.
+
+        return if (id == android.R.id.home) {
+            finish()
+            true
+        } else super.onOptionsItemSelected(item)
     }
 
     

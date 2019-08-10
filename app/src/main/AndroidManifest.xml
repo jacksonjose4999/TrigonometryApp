@@ -31,7 +31,9 @@
                     android:value=".MainActivity"/>
         </activity>
         <activity android:name=".ConfirmQuizActivity">
-        </activity>
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>        </activity>
         <activity android:name="com.example.trigopdfsclasses.BasicTrigonometricFormulas">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"

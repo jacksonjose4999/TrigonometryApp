@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
+import androidx.appcompat.app.ActionBar
 import kotlinx.android.synthetic.main.activity_confirm_quiz.*
 
 class ConfirmQuizActivity : AppCompatActivity() {
@@ -15,10 +16,7 @@ class ConfirmQuizActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirm_quiz)
-
-
         val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
-
 
         quiz_topic_view.text = quizInfo.quizName
         current_score_view.text = "Current Score : " + quizInfo.currQuizScore.toString()
@@ -30,6 +28,7 @@ class ConfirmQuizActivity : AppCompatActivity() {
             intent.putExtra("QuizAct", string)
             quizName = string
             startActivity(intent)
+            finish()
         }
     }
 
