@@ -241,29 +241,31 @@ class Quiz (quizName: String){
             "Trigonometric Ratio's values" -> {
                 questionsArray.add(Questions("Value of sin(0)", "1", "0", "-1", "-1",2))
                 questionsArray.add(Questions("Value of cos(0)", "1", "0", "-1", "-1",1))
-                questionsArray.add(Questions("Value of tan(90)", "1", "not defined", "1", "-1",2))
+                questionsArray.add(Questions("Value of tan(90)", "1", "not defined", "-1", "-1",2))
                 questionsArray.add(Questions("Value of sin(30)", "1/2", "0", "1", "-1",1))
-                questionsArray.add(Questions("Value of cot(0)", "not defined", "0", "-1", "1",1))
-                questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "1",2))
-                questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "1",1))
+                questionsArray.add(Questions("Value of cot(0)", "not defined", "0", "-1", "-1",1))
+                questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "-1",2))
+                questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "-1",1))
                 questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "2/√3", "-1",1))
             }
             "Basic Trigonometric Formulas" -> {
-                questionsArray.add(Questions("sin(x) * cosec(x) = ?", "0", "1","-1","1/2",2))
-                questionsArray.add(Questions("cos(x) * sec(x) = ?","1", "infinity","0","2",1))
-                questionsArray.add(Questions("tan(x) * cot(x) = ?","1", "infinity","0","2",1))
-                questionsArray.add(Questions("tan(x) = ?","cos(x)/sin(x)","sec(x)/cosec(x)", "sec(x)/cos(x)","cosec(x)/sin(x)",2))
-                questionsArray.add(Questions("sin^2(x) + cos^2(x) = ?","0","2","3","1",4))
-                questionsArray.add(Questions("1+tan^2(x) = ?","cosec^2(x)","sin^2(x)","sec^2(x)","cot^2(x)",3))
-                questionsArray.add(Questions("1+cot^2(x) = ?","cosec^2(x)","sin^2(x)","sec^2(x)","cot^2(x)",1))
+                questionsArray.add(Questions("sin(x) * cosec(x) =", "0", "1","-1","1/2",2))
+                questionsArray.add(Questions("cos(x) * sec(x)","1", "infinity","0","2",1))
+                questionsArray.add(Questions("tan(x) * cot(x)","1", "infinity","0","2",1))
+                questionsArray.add(Questions("tan(x) = ","cos(x)/sin(x)","sec(x)/cosec(x)", "sec(x)/cos(x)","cosec(x)/sin(x)",2))
+
+                questionsArray.add(Questions("sin^2(x) + cos^2(x) = ","0","2","3","1",4))
+                questionsArray.add(Questions("1+tan^2(x) = ","cosec^2(x)","sin^2(x)","sec^2(x)","cot^2(x)",3))
+
+                questionsArray.add(Questions("1+cot^2(x) = ","cosec^2(x)","sin^2(x)","sec^2(x)","cot^2(x)",1))
             }
             "Trigonometric ratios and functions" -> {
-                questionsArray.add(Questions("sin(x) = ?","p/h","p/b","h/b","b/h",1))
-                questionsArray.add(Questions("cos(x) = ?","p/h","p/b","h/b","b/h",4))
-                questionsArray.add(Questions("tan(x) = ?","p/h","p/b","h/b","b/h",2))
-                questionsArray.add(Questions("cosec(x) = ?","p/h","p/b","h/p","b/h",3))
-                questionsArray.add(Questions("sec(x) = ?","p/h","p/b","h/b","b/h",3))
-                questionsArray.add(Questions("cot(x) = ?","b/p","p/b","h/b","b/h",1))
+                questionsArray.add(Questions("sin(x)","p/h","p/b","h/b","b/h",1))
+                questionsArray.add(Questions("cos(x)","p/h","p/b","h/b","b/h",4))
+                questionsArray.add(Questions("tan(x)","p/h","p/b","h/b","b/h",2))
+                questionsArray.add(Questions("cosec(x)","p/h","p/b","h/p","b/h",3))
+                questionsArray.add(Questions("sec(x)","p/h","p/b","h/b","b/h",3))
+                questionsArray.add(Questions("cot(x)","b/p","p/b","h/b","b/h",1))
             }
             "Double Triple Half" -> {
                 questionsArray.add(Questions("sin(2A) = ","2sin(A)sin(A)","2cos(A)sin(A)","2cos(A)cos(A)","2sin(A)cosec(A)",2))
@@ -281,6 +283,7 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("2cos(A)sin(B) = ", "sin(A+B) - sin(A-B)", "sin(A+B) + sin(A-B)", "sin(A-B) + sin(A-B)", "sin(A+B) + sin(A+B)", 1))
                 questionsArray.add(Questions("2cos(A)cos(B) = ", "sin(A+B) + cos(A-B)", "cos(A+B) + cos(A-B)", "sin(A+B) - cos(A-B)", "cos(A+B) - cos(A-B)",2))
                 questionsArray.add(Questions("2sin(A)sin(B) = ", "sin(A+B) - sin(A-B)", "sin(A+B) - cos(A-B)", "cos(A+B) - cos(A-B)", "cos(A+B) + cos(A-B)",3))
+
                 questionsArray.add(Questions("sin(A) + sin(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","2sin((A+B)/2)cos((A-B)/2)",4))
                 questionsArray.add(Questions("sin(A) - sin(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A+B)/2)","2sin((A+B)/2)cos((A-B)/2)",1))
                 questionsArray.add(Questions("cos(A) + cos(B) = ","2cos((A+B)/2)sin((A-B)/2)","2sin((A-B)/2)cos((A-B)/2)","2cos((A+B)/2)cos((A-B)/2)","2sin((A+B)/2)cos((A-B)/2)",3))
@@ -293,6 +296,7 @@ class Quiz (quizName: String){
 
             }
             "Trigonometric Equations and general values" -> {
+                //Ishank
                 questionsArray.add(Questions("If 0 <t< 2π such that sin(t) = √2/2 and cot(t)<0,then t=?","π/4","3π/4","5π/4","7π/4",2))
                 questionsArray.add(Questions("If 0 <t< 2π and sin(t) = -1, then t=","π/2","3π/2","5π/4","π",2))
                 questionsArray.add(Questions("If 0 <α< π and cos(α) = -√3/2, then α =","π/6","-π/6","5π/6","7π/6",3))
@@ -302,6 +306,7 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("Find all values of t such that cos(πt) = 1","t = 2kπ ; k = 0","t = 2k ; k = 0","t = k ; k = 0","t = kπ ; k = 0",2))
             }
             "Addition and Subtraction" ->{
+                //Ishank
                 questionsArray.add(Questions("sin(A+B) = ?","sin(A)cos(B) - cos(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","sin(A)sin(B) + cos(A)cos(B)","sin(A)sin(B) - cos(A)cos(B)",2))
                 questionsArray.add(Questions("cos(A+B) = ?","cos(A)cos(B) - sin(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","cos(A)cos(B) + sin(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)",1))
                 questionsArray.add(Questions("sin(A-B) = ?","sin(A)cos(B) + cos(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)","sin(A)sin(B) - cos(A)cos(B)","sin(A)sin(B) + cos(A)cos(B)",2))

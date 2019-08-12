@@ -4,7 +4,6 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.trigonometry.QuizActivity.Companion.quizQ
 import com.xwray.groupie.GroupAdapter
@@ -41,24 +40,11 @@ class ShowResult : AppCompatActivity() {
         for ((index,i) in userAnswers.withIndex()){
             adapter.add(ResultItem(i,index))
         }
-      //  adapter.add(FinalScoreItem())
+        //  adapter.add(FinalScoreItem())
 
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        val id = item.getItemId()
-
-        // click on icon to go back
-        //triangle icon on the main android toolbar.
-
-        return if (id == android.R.id.home) {
-            finish()
-            true
-        } else super.onOptionsItemSelected(item)
-    }
-
-    
 
     class ResultItem(private val userAnswer : Int, private val index: Int) : Item<ViewHolder>(){
         override fun getLayout(): Int {
@@ -76,10 +62,13 @@ class ShowResult : AppCompatActivity() {
                 0 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+"No answer selected"
             }
             if (userAnswer == quizQ!!.questionsArray[index].ans){
-                viewHolder.itemView.your_answer_result.setBackgroundColor(Color.GREEN)
+                //viewHolder.itemView.your_answer_result.setBackgroundColor(Color.GREEN)
+                viewHolder.itemView.result_imageView.setImageResource(R.drawable.checkedhaiye)
             }
-            else{
-                viewHolder.itemView.your_answer_result.setBackgroundColor(Color.RED)
+            else if (userAnswer != quizQ!!.questionsArray[index].ans){
+                //viewHolder.itemView.your_answer_result.setBackgroundColor(Color.RED)
+                if(userAnswer == 0) viewHolder.itemView.result_imageView.setImageResource(R.drawable.warning)
+                else viewHolder.itemView.result_imageView.setImageResource(R.drawable.cancelhiaye)
             }
             val correctAnswerText = "Correct Answer: "
 
@@ -89,7 +78,7 @@ class ShowResult : AppCompatActivity() {
                 quizQ!!.questionsArray[index].ans == 3 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op3
                 quizQ!!.questionsArray[index].ans == 4 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op3
             }
-            viewHolder.itemView.correct_answer_text_view.setBackgroundColor(Color.GREEN)
+            //viewHolder.itemView.correct_answer_text_view.setBackgroundColor(Color.GREEN)
 
         }
     }

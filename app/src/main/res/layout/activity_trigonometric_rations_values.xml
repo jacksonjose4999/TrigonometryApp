@@ -10,10 +10,16 @@
 
 
     <TextView
-            android:text="Current Score : 0"
+            android:text="Current Score : 12"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="193dp" android:id="@+id/textView" android:layout_weight="1" android:gravity="end"
-            android:paddingRight="10dp" android:paddingTop="20dp" android:textSize="20sp"/>
+            android:background="@drawable/options_button_style"
+            android:elevation="8dp"
+            android:layout_margin="10dp"
+            android:textColor="#123456"
+            android:textStyle="italic"
+            android:layout_height="160dp" android:id="@+id/textView" android:layout_weight="1" android:gravity="center"
+            android:paddingRight="10dp" android:textSize="24dp"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" app:srcCompat="@drawable/trigonometric_ratios"
@@ -21,6 +27,13 @@
 
     <Button android:layout_width="match_parent" android:layout_height="50dp"
             android:id="@+id/values_quiz"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/rect_oval2"
+            android:textColor="#eeeeee"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            android:elevation="6dp"
             android:text="Pop Quiz"
     />
 </LinearLayout>
