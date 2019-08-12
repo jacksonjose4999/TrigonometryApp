@@ -29,13 +29,14 @@ class QuizActivity : AppCompatActivity() {
         val quizInfoClass = ConfirmQuizActivity.quizName
         Log.wtf("NullPointerIdiot", "$quizInfoClass")
         quizQ = Quiz(quizInfoClass)
-        noOfQuestions = quizQ!!.questionsArray.size;
+        noOfQuestions = quizQ!!.questionsArray.size
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         setOnClickListeners()
+        quizback.setBackgroundResource(R.drawable.cropx)
 
         startQuiz(quizQ!!.questionsArray)
     }

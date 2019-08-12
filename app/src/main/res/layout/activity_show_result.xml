@@ -12,6 +12,7 @@
     <TextView android:layout_width="match_parent"
               android:textSize="30dp"
               android:padding="12dp"
+              android:id="@+id/total_score_view"
               android:layout_margin="10dp"
               android:gravity="center"
               android:text="Your Score is "

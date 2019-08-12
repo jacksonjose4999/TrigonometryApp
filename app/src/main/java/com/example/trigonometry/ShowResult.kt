@@ -1,6 +1,5 @@
 package com.example.trigonometry
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -16,12 +15,15 @@ class ShowResult : AppCompatActivity() {
 
     private var userAnswers = ArrayList<Int>()
     private val adapter = GroupAdapter<ViewHolder>()
-    private val totalScore = 0
 
+    companion object{
+        private var totalScore = 0
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_result)
+        totalScore = 0;
 
         result_recycler_view.layoutManager = LinearLayoutManager(this)
         result_recycler_view.adapter = adapter
@@ -33,14 +35,13 @@ class ShowResult : AppCompatActivity() {
         }
 
         addResultItemsToRecyclerView()
-
     }
 
     private fun addResultItemsToRecyclerView(){
         for ((index,i) in userAnswers.withIndex()){
             adapter.add(ResultItem(i,index))
         }
-        //  adapter.add(FinalScoreItem())
+        total_score_view.setText(total_score_view.text.toString()+" $totalScore/${userAnswers.size}")
 
     }
 
@@ -64,6 +65,7 @@ class ShowResult : AppCompatActivity() {
             if (userAnswer == quizQ!!.questionsArray[index].ans){
                 //viewHolder.itemView.your_answer_result.setBackgroundColor(Color.GREEN)
                 viewHolder.itemView.result_imageView.setImageResource(R.drawable.checkedhaiye)
+                totalScore++
             }
             else if (userAnswer != quizQ!!.questionsArray[index].ans){
                 //viewHolder.itemView.your_answer_result.setBackgroundColor(Color.RED)

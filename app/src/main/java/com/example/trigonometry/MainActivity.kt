@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = GroupAdapter<ViewHolder>()
         recycler_view_home.layoutManager = LinearLayoutManager(this)
         recycler_view_home.adapter = adapter
+        recycler_view_home.setBackgroundResource(R.drawable.crop)
 
         addItemsToRecyclerHome(adapter)
 

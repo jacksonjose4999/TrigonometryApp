@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:elevation="20dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="20dp"
-        app:cardCornerRadius="16dp"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="16dp" app:cardBackgroundColor="#00C02121">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="vertical"
@@ -17,13 +17,14 @@
                   android:layout_height="wrap_content">
 
         <TextView
+                android:layout_marginTop="10dp"
                 android:text="Title"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:id="@+id/item_title"
                 android:paddingLeft="20dp"
                 android:textSize="26sp"
-                android:textColor="#000000"
+                android:textColor="#F1E7E7"
                 android:textStyle="bold"
         />
         <TextView
@@ -31,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:paddingLeft="20dp"
                 android:textSize="20sp"
-                android:textColor="#E6000000"
+                android:textColor="#F1E7E7"
                 android:layout_height="61dp"
                 android:id="@+id/item_discrip"/>
 
