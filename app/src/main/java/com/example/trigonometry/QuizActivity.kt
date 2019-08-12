@@ -250,15 +250,15 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "2/√3", "-1",1))
             }
             "Basic Trigonometric Formulas" -> {
-                questionsArray.add(Questions("sin(x) * cosec(x) =", "0", "1","-1","1/2",2))
-                questionsArray.add(Questions("cos(x) * sec(x)","1", "infinity","0","2",1))
-                questionsArray.add(Questions("tan(x) * cot(x)","1", "infinity","0","2",1))
+                questionsArray.add(Questions("sin(x) × cosec(x) =", "0", "1","-1","1/2",2))
+                questionsArray.add(Questions("cos(x) × sec(x)","1", "infinity","0","2",1))
+                questionsArray.add(Questions("tan(x) × cot(x)","1", "infinity","0","2",1))
                 questionsArray.add(Questions("tan(x) = ","cos(x)/sin(x)","sec(x)/cosec(x)", "sec(x)/cos(x)","cosec(x)/sin(x)",2))
 
-                questionsArray.add(Questions("sin^2(x) + cos^2(x) = ","0","2","3","1",4))
-                questionsArray.add(Questions("1+tan^2(x) = ","cosec^2(x)","sin^2(x)","sec^2(x)","cot^2(x)",3))
+                questionsArray.add(Questions("sin²(x) + cos²(x) = ","0","2","3","1",4))
+                questionsArray.add(Questions("1+tan²(x) = ","cosec²(x)","sin²(x)","sec²(x)","cot²(x)",3))
 
-                questionsArray.add(Questions("1+cot^2(x) = ","cosec^2(x)","sin^2(x)","sec^2(x)","cot^2(x)",1))
+                questionsArray.add(Questions("1+cot²(x) = ","cosec²(x)","sin²(x)","sec²(x)","cot²(x)",1))
             }
             "Trigonometric ratios and functions" -> {
                 questionsArray.add(Questions("sin(x)","p/h","p/b","h/b","b/h",1))
@@ -270,13 +270,13 @@ class Quiz (quizName: String){
             }
             "Double Triple Half" -> {
                 questionsArray.add(Questions("sin(2A) = ","2sin(A)sin(A)","2cos(A)sin(A)","2cos(A)cos(A)","2sin(A)cosec(A)",2))
-                questionsArray.add(Questions("cos(2A) = ","sin^2(A) - cos^2(A)","1+cos^2(A)","cos^2(A) - sin^2(A)","1+2sin^2(A)",3))
-                questionsArray.add(Questions("tan(2A) = ", "2tan(A)/(1-tan^2(A)", "2tan(A)/(1+tan^2(A)", "tan(A)/(1-tan^2(A)", "tan(A)/(1+tan^2(A)",1))
-                questionsArray.add(Questions("cot(2A) = ", "(1-cot^2(A))/2cot(A)", "(1+cot^2(A))/2cot(A)", "(1-sin^2(A))/2cot(A)", "(-1+cot^2(A))/2cot(A)",4))
+                questionsArray.add(Questions("cos(2A) = ","sin²(A) - cos²(A)","1+cos²(A)","cos²(A) - sin²(A)","1+2sin²(A)",3))
+                questionsArray.add(Questions("tan(2A) = ", "2tan(A)/(1-tan²(A)", "2tan(A)/(1+tan²(A)", "tan(A)/(1-tan²(A)", "tan(A)/(1+tan²(A)",1))
+                questionsArray.add(Questions("cot(2A) = ", "(1-cot²(A))/2cot(A)", "(1+cot²(A))/2cot(A)", "(1-sin²(A))/2cot(A)", "(-1+cot²(A))/2cot(A)",4))
                 questionsArray.add(Questions("sin(A) = ", "2sin(A)cos(A)", "2sin(A/2)cos(A/2)", "sin(A/2)cos(A/2)", "2sin(A/2)cosec(A/2)",2))
                 questionsArray.add(Questions("sin(3A) = ", "3sin(A) - 4 sin^3(A)", "4sin(A) - 3sin^3(A)", "3sin(A) + 4 sin^3(A)", "4sin(A) + 3 sin^3(A)",1))
                 questionsArray.add(Questions("cos(3A) = ", "4cos^3 + 3cos(A)", "3cos - 4cos^3(A)", "4cos^3 - 3cos(A)", "4cos^3 - 3sin(A)",3))
-                questionsArray.add(Questions("tan(3A) = ", "(tan(A) - 3tan^3(A))/(1-tan^2(A)", "(3tan(A) + tan^3(A))/(1-3tan^2(A)", "(3tan(A) - tan^3(A))/(1+3tan^2(A)", "(3tan(A) - tan^3(A))/(1-3tan^2(A)", 4))
+                questionsArray.add(Questions("tan(3A) = ", "(tan(A) - 3tan^3(A))/(1-tan²(A)", "(3tan(A) + tan^3(A))/(1-3tan²(A)", "(3tan(A) - tan^3(A))/(1+3tan²(A)", "(3tan(A) - tan^3(A))/(1-3tan²(A)", 4))
             }
 
             "Transformation" -> {
@@ -293,8 +293,15 @@ class Quiz (quizName: String){
 
 
             "Conditional Identities" -> {
-
-
+                questionsArray.add(Questions("sin(A)+sin(B)+sin(C) = ? = ","4cos(A/2)cos(B/2)cos(C/2)","2cos(A/2)cos(B/2)cos(C/2)","1+4cos(A/2)cos(B/2)cos(C/2)","1-4cos(A/2)cos(B/2)cos(C/2)",1))
+                questionsArray.add(Questions("cos(A)+cos(B)+cos(C) = ? = ","4sin(A/2)sin(B/2)sin(C/2)","2sin(A/2)sin(B/2)sin(C/2)","1+4sinA/2)sin(B/2)sin(C/2)","1-4sin(A/2)sin(B/2)sin(C/2)",3))
+                questionsArray.add(Questions("sin(2A)+sin(2B)+sin(2C) = ? = ","4cos(A)cos(B)cos(C)","4sin(A)sin(B)sin(C)","1+4cos(A)cos(B)cos(C)","1-4sin(A)sin(B)sin(C)",2))
+                questionsArray.add(Questions("cos(2A)+cos(2B)+cos(2C) = ? = ","4cos(A)cos(B)cos(C)","4sin(A)sin(B)sin(C)","1-4cos(A)cos(B)cos(C)","1-4sin(A)sin(B)sin(C)",3))
+                questionsArray.add(Questions("cos(2A)+cos(2B)-cos(2C) = ? = ","1-4cos(A)cos(B)sin(C)","1-4sin(A)sin(B)cos(C)","1+4cos(A)cos(B)sin(C)","1+4sin(A)sin(B)cos(C)",2))
+                questionsArray.add(Questions("cos²(A)+cos²(B)+cos²(C) = ? = ","1+2cos(A)cos(B)cos(C)","1-2cos(A)cos(B)cos(C)","1+4cos(A)cos(B)cos(C)","1-4cos(A)cos(B)cos(C)",2))
+                questionsArray.add(Questions("sin²(A)+sin²(B)+sin²(C) = ? = ","2cos(A)cos(B)cos(C)","2sin(A)sin(B)cos(C)","2sin(A)sin(B)sin(C)","none of the above",4))
+                questionsArray.add(Questions("sin²(A/2)+sin²(B/2)+sin²(C/2) = ? = ","1-4cos(A/2)cos(B/2)cos(C/2)","1+2sin(A/2)sin(B/2)cos(C/2)","1-2sin(A/2)sin(B/2)cos(C/2)","1-2cos(A/2)cos(B/2)cos(C/2)",3))
+                questionsArray.add(Questions("cos²(A/2)+cos²(B/2)+cos²(C/2) = ? = ","2cos(A/2)cos(B/2)sin(C/2)","4cos(A/2)cos(B/2)sin(C/2)","1+2cos(A/2)cos(B/2)sin(C/2)","1-2cos(A/2)cos(B/2)sin(C/2)",1))
             }
             "Trigonometric Equations and general values" -> {
                 //Ishank
