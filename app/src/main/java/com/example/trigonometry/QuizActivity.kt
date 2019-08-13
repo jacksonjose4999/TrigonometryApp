@@ -212,7 +212,6 @@ class QuizActivity : AppCompatActivity() {
                 Log.wtf("Store Answer", "the answer stored is 2")
 
             }
-
             option3Selected -> {
                 Log.wtf("Store Answer", "the answer stored is 3")
                 userAnwers.add(3)
@@ -234,7 +233,6 @@ class QuizActivity : AppCompatActivity() {
 
 class Quiz (quizName: String){
     var questionsArray = ArrayList<Questions>()
-    var imageQuestions = ArrayList<ImageQuestions>()
     var quizName: String? = null
     init {
         this.quizName = quizName
@@ -247,20 +245,18 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("Value of cot(0)", "not defined", "0", "-1", "-1",1))
                 questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "-1",2))
                 questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "-1",1))
-                questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "2/√3", "-1",1))
+                questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "2/√3", "-1",3))
             }
             "Basic Trigonometric Formulas" -> {
                 questionsArray.add(Questions("sin(x) × cosec(x) =", "0", "1","-1","1/2",2))
                 questionsArray.add(Questions("cos(x) × sec(x)","1", "infinity","0","2",1))
                 questionsArray.add(Questions("tan(x) × cot(x)","1", "infinity","0","2",1))
                 questionsArray.add(Questions("tan(x) = ","cos(x)/sin(x)","sec(x)/cosec(x)", "sec(x)/cos(x)","cosec(x)/sin(x)",2))
-
                 questionsArray.add(Questions("sin²(x) + cos²(x) = ","0","2","3","1",4))
                 questionsArray.add(Questions("1+tan²(x) = ","cosec²(x)","sin²(x)","sec²(x)","cot²(x)",3))
-
                 questionsArray.add(Questions("1+cot²(x) = ","cosec²(x)","sin²(x)","sec²(x)","cot²(x)",1))
             }
-            "Trigonometric ratios and functions" -> {
+            "Trigonometric Ratio's and Functions" -> {
                 questionsArray.add(Questions("sin(x)","p/h","p/b","h/b","b/h",1))
                 questionsArray.add(Questions("cos(x)","p/h","p/b","h/b","b/h",4))
                 questionsArray.add(Questions("tan(x)","p/h","p/b","h/b","b/h",2))
@@ -293,18 +289,18 @@ class Quiz (quizName: String){
 
 
             "Conditional Identities" -> {
-                questionsArray.add(Questions("sin(A)+sin(B)+sin(C) = ? = ","4cos(A/2)cos(B/2)cos(C/2)","2cos(A/2)cos(B/2)cos(C/2)","1+4cos(A/2)cos(B/2)cos(C/2)","1-4cos(A/2)cos(B/2)cos(C/2)",1))
-                questionsArray.add(Questions("cos(A)+cos(B)+cos(C) = ? = ","4sin(A/2)sin(B/2)sin(C/2)","2sin(A/2)sin(B/2)sin(C/2)","1+4sinA/2)sin(B/2)sin(C/2)","1-4sin(A/2)sin(B/2)sin(C/2)",3))
-                questionsArray.add(Questions("sin(2A)+sin(2B)+sin(2C) = ? = ","4cos(A)cos(B)cos(C)","4sin(A)sin(B)sin(C)","1+4cos(A)cos(B)cos(C)","1-4sin(A)sin(B)sin(C)",2))
-                questionsArray.add(Questions("cos(2A)+cos(2B)+cos(2C) = ? = ","4cos(A)cos(B)cos(C)","4sin(A)sin(B)sin(C)","1-4cos(A)cos(B)cos(C)","1-4sin(A)sin(B)sin(C)",3))
-                questionsArray.add(Questions("cos(2A)+cos(2B)-cos(2C) = ? = ","1-4cos(A)cos(B)sin(C)","1-4sin(A)sin(B)cos(C)","1+4cos(A)cos(B)sin(C)","1+4sin(A)sin(B)cos(C)",2))
-                questionsArray.add(Questions("cos²(A)+cos²(B)+cos²(C) = ? = ","1+2cos(A)cos(B)cos(C)","1-2cos(A)cos(B)cos(C)","1+4cos(A)cos(B)cos(C)","1-4cos(A)cos(B)cos(C)",2))
-                questionsArray.add(Questions("sin²(A)+sin²(B)+sin²(C) = ? = ","2cos(A)cos(B)cos(C)","2sin(A)sin(B)cos(C)","2sin(A)sin(B)sin(C)","none of the above",4))
-                questionsArray.add(Questions("sin²(A/2)+sin²(B/2)+sin²(C/2) = ? = ","1-4cos(A/2)cos(B/2)cos(C/2)","1+2sin(A/2)sin(B/2)cos(C/2)","1-2sin(A/2)sin(B/2)cos(C/2)","1-2cos(A/2)cos(B/2)cos(C/2)",3))
-                questionsArray.add(Questions("cos²(A/2)+cos²(B/2)+cos²(C/2) = ? = ","2cos(A/2)cos(B/2)sin(C/2)","4cos(A/2)cos(B/2)sin(C/2)","1+2cos(A/2)cos(B/2)sin(C/2)","1-2cos(A/2)cos(B/2)sin(C/2)",1))
+                questionsArray.add(Questions("sin(A)+sin(B)+sin(C) =  ","4cos(A/2)cos(B/2)cos(C/2)","2cos(A/2)cos(B/2)cos(C/2)","1+4cos(A/2)cos(B/2)cos(C/2)","1-4cos(A/2)cos(B/2)cos(C/2)",1))
+                questionsArray.add(Questions("cos(A)+cos(B)+cos(C) = ","4sin(A/2)sin(B/2)sin(C/2)","2sin(A/2)sin(B/2)sin(C/2)","1+4sinA/2)sin(B/2)sin(C/2)","1-4sin(A/2)sin(B/2)sin(C/2)",3))
+                questionsArray.add(Questions("sin(2A)+sin(2B)+sin(2C) =  ","4cos(A)cos(B)cos(C)","4sin(A)sin(B)sin(C)","1+4cos(A)cos(B)cos(C)","1-4sin(A)sin(B)sin(C)",2))
+                questionsArray.add(Questions("cos(2A)+cos(2B)+cos(2C) =  ","4cos(A)cos(B)cos(C)","4sin(A)sin(B)sin(C)","1-4cos(A)cos(B)cos(C)","1-4sin(A)sin(B)sin(C)",3))
+                questionsArray.add(Questions("cos(2A)+cos(2B)-cos(2C) =  ","1-4cos(A)cos(B)sin(C)","1-4sin(A)sin(B)cos(C)","1+4cos(A)cos(B)sin(C)","1+4sin(A)sin(B)cos(C)",2))
+                questionsArray.add(Questions("cos²(A)+cos²(B)+cos²(C) =  ","1+2cos(A)cos(B)cos(C)","1-2cos(A)cos(B)cos(C)","1+4cos(A)cos(B)cos(C)","1-4cos(A)cos(B)cos(C)",2))
+                questionsArray.add(Questions("sin²(A)+sin²(B)+sin²(C) =  ","2cos(A)cos(B)cos(C)","2sin(A)sin(B)cos(C)","2sin(A)sin(B)sin(C)","none of the above",4))
+                questionsArray.add(Questions("sin²(A/2)+sin²(B/2)+sin²(C/2) =  ","1-4cos(A/2)cos(B/2)cos(C/2)","1+2sin(A/2)sin(B/2)cos(C/2)","1-2sin(A/2)sin(B/2)cos(C/2)","1-2cos(A/2)cos(B/2)cos(C/2)",3))
+                questionsArray.add(Questions("cos²(A/2)+cos²(B/2)+cos²(C/2) =  ","2cos(A/2)cos(B/2)sin(C/2)","4cos(A/2)cos(B/2)sin(C/2)","1+2cos(A/2)cos(B/2)sin(C/2)","1-2cos(A/2)cos(B/2)sin(C/2)",1))
             }
+
             "Trigonometric Equations and general values" -> {
-                //Ishank
                 questionsArray.add(Questions("If 0 <t< 2π such that sin(t) = √2/2 and cot(t)<0,then t=?","π/4","3π/4","5π/4","7π/4",2))
                 questionsArray.add(Questions("If 0 <t< 2π and sin(t) = -1, then t=","π/2","3π/2","5π/4","π",2))
                 questionsArray.add(Questions("If 0 <α< π and cos(α) = -√3/2, then α =","π/6","-π/6","5π/6","7π/6",3))
@@ -313,18 +309,18 @@ class Quiz (quizName: String){
                 questionsArray.add(Questions("Find all values of t such that sin(t) = 0","t = kπ/2 ; k = 0","t = kπ/4 ; k = 0","t = kπ ; k = 0","t = 2kπ ; k = 0",3))
                 questionsArray.add(Questions("Find all values of t such that cos(πt) = 1","t = 2kπ ; k = 0","t = 2k ; k = 0","t = k ; k = 0","t = kπ ; k = 0",2))
             }
+
             "Addition and Subtraction" ->{
-                //Ishank
-                questionsArray.add(Questions("sin(A+B) = ?","sin(A)cos(B) - cos(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","sin(A)sin(B) + cos(A)cos(B)","sin(A)sin(B) - cos(A)cos(B)",2))
-                questionsArray.add(Questions("cos(A+B) = ?","cos(A)cos(B) - sin(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","cos(A)cos(B) + sin(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)",1))
-                questionsArray.add(Questions("sin(A-B) = ?","sin(A)cos(B) + cos(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)","sin(A)sin(B) - cos(A)cos(B)","sin(A)sin(B) + cos(A)cos(B)",2))
-                questionsArray.add(Questions("cos(A-B) = ?","cos(A)cos(B) - sin(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","cos(A)cos(B) + sin(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)",3))
-                questionsArray.add(Questions("tan(A+B) = ?","tan(A)+tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1-tan(A)tan(B)","tan(A)+tan(B)/1-tan(A)tan(B)",4))
-                questionsArray.add(Questions("tan(A-B) = ?","tan(A)+tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1-tan(A)tan(B)","tan(A)+tan(B)/1-tan(A)tan(B)",2))
-                questionsArray.add(Questions("cot(A+B) = ?","cot(B)cot(A)-1/cot(B)+cot(A)","cot(B)cot(A)-1/cot(B)-cot(A)","cot(B)cot(A)+1/cot(B)+cot(A)","cot(B)cot(A)+1/cot(B)-cot(A)",1))
-                questionsArray.add(Questions("cot(A-B) = ?","cot(B)cot(A)-1/cot(B)+cot(A)","cot(B)cot(A)-1/cot(B)-cot(A)","cot(B)cot(A)+1/cot(B)+cot(A)","cot(B)cot(A)+1/cot(B)-cot(A)",2))
-                questionsArray.add(Questions("sin(A+B+C) = ?","sin(A)cos(B)cos(C) + cos(A)sin(B)cos(C) - cos(A)cos(B)sin(C) - sin(A)sin(B)sin(C)","sin(A)cos(B)cos(C) - cos(A)sin(B)cos(C) + cos(A)cos(B)sin(C) - sin(A)sin(B)sin(C)","sin(A)cos(B)cos(C) + cos(A)sin(B)cos(C) + cos(A)cos(B)sin(C) - sin(A)sin(B)sin(C)","sin(A)cos(B)cos(C) + cos(A)sin(B)cos(C) + cos(A)cos(B)sin(C) + sin(A)sin(B)sin(C)",3))
-                questionsArray.add(Questions("cos(A+B+C) = ?","cos(A)cos(B)cos(C) - cos(A)sin(B)sin(C) - sin(A)cos(B)sin(C) - cos(A)sin(B)sin(C)","cos(A)cos(B)cos(C) + cos(A)sin(B)sin(C) + sin(A)cos(B)sin(C) - cos(A)sin(B)sin(C)","cos(A)cos(B)cos(C) + cos(A)sin(B)sin(C) - sin(A)cos(B)sin(C) - cos(A)sin(B)sin(C)","cos(A)cos(B)cos(C) - cos(A)sin(B)sin(C) - sin(A)cos(B)sin(C) + cos(A)sin(B)sin(C)",1))
+                questionsArray.add(Questions("sin(A+B) = ","sin(A)cos(B) - cos(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","sin(A)sin(B) + cos(A)cos(B)","sin(A)sin(B) - cos(A)cos(B)",2))
+                questionsArray.add(Questions("cos(A+B) = ","cos(A)cos(B) - sin(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","cos(A)cos(B) + sin(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)",1))
+                questionsArray.add(Questions("sin(A-B) = ","sin(A)cos(B) + cos(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)","sin(A)sin(B) - cos(A)cos(B)","sin(A)sin(B) + cos(A)cos(B)",2))
+                questionsArray.add(Questions("cos(A-B) = ","cos(A)cos(B) - sin(A)sin(B)","sin(A)cos(B) + cos(A)sin(B)","cos(A)cos(B) + sin(A)sin(B)","sin(A)cos(B) - cos(A)sin(B)",3))
+                questionsArray.add(Questions("tan(A+B) = ","tan(A)+tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1-tan(A)tan(B)","tan(A)+tan(B)/1-tan(A)tan(B)",4))
+                questionsArray.add(Questions("tan(A-B) = ","tan(A)+tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1+tan(A)tan(B)","tan(A)-tan(B)/1-tan(A)tan(B)","tan(A)+tan(B)/1-tan(A)tan(B)",2))
+                questionsArray.add(Questions("cot(A+B) = ","cot(B)cot(A)-1/cot(B)+cot(A)","cot(B)cot(A)-1/cot(B)-cot(A)","cot(B)cot(A)+1/cot(B)+cot(A)","cot(B)cot(A)+1/cot(B)-cot(A)",1))
+                questionsArray.add(Questions("cot(A-B) = ","cot(B)cot(A)-1/cot(B)+cot(A)","cot(B)cot(A)-1/cot(B)-cot(A)","cot(B)cot(A)+1/cot(B)+cot(A)","cot(B)cot(A)+1/cot(B)-cot(A)",2))
+                questionsArray.add(Questions("sin(A+B+C) = ","sin(A)cos(B)cos(C) + cos(A)sin(B)cos(C) - cos(A)cos(B)sin(C) - sin(A)sin(B)sin(C)","sin(A)cos(B)cos(C) - cos(A)sin(B)cos(C) + cos(A)cos(B)sin(C) - sin(A)sin(B)sin(C)","sin(A)cos(B)cos(C) + cos(A)sin(B)cos(C) + cos(A)cos(B)sin(C) - sin(A)sin(B)sin(C)","sin(A)cos(B)cos(C) + cos(A)sin(B)cos(C) + cos(A)cos(B)sin(C) + sin(A)sin(B)sin(C)",3))
+                questionsArray.add(Questions("cos(A+B+C) = ","cos(A)cos(B)cos(C) - cos(A)sin(B)sin(C) - sin(A)cos(B)sin(C) - cos(A)sin(B)sin(C)","cos(A)cos(B)cos(C) + cos(A)sin(B)sin(C) + sin(A)cos(B)sin(C) - cos(A)sin(B)sin(C)","cos(A)cos(B)cos(C) + cos(A)sin(B)sin(C) - sin(A)cos(B)sin(C) - cos(A)sin(B)sin(C)","cos(A)cos(B)cos(C) - cos(A)sin(B)sin(C) - sin(A)cos(B)sin(C) + cos(A)sin(B)sin(C)",1))
             }
 
         }
@@ -333,4 +329,3 @@ class Quiz (quizName: String){
 
 data class Questions (val ques : String, val op1 : String, val op2 : String, val op3 : String,val op4 : String, val ans : Int)
 
-data class ImageQuestions (val ques: Int, val op1: Int,val op2: Int, val op3: Int, val op4: Int, val ans : Int)

@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.
 class DoubleTripleHalf : AppCompatActivity() {
     val currScore = 0
     val quizName = "Double Triple Half"
-    val maxScore = 20
+    val maxScore = 8
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,8 @@ class DoubleTripleHalf : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
     private fun getData(quiz: String): Int {
         val sharedPreferences = getSharedPreferences("testScores", Context.MODE_PRIVATE)
         return sharedPreferences.getInt(quiz, 0)

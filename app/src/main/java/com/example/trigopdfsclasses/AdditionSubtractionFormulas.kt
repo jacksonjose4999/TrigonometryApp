@@ -10,6 +10,8 @@ import com.example.trigonometry.R
 import kotlinx.android.synthetic.main.activity_addition__sub_formulas.*
 import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.*
 
+
+
 class AdditionSubtractionFormulas : AppCompatActivity() {
 
 

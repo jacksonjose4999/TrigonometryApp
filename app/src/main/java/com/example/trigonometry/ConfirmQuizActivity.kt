@@ -1,5 +1,6 @@
 package com.example.trigonometry
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,17 +20,21 @@ class ConfirmQuizActivity : AppCompatActivity() {
         val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
 
         quiz_topic_view.text = quizInfo.quizName
-        current_score_view.text = "Current Score : " + quizInfo.currQuizScore.toString()
+        current_score_view.text = "Current Score : " + quizInfo.currQuizScore.toString()+getData(quizInfo.quizName)
         max_score_view.text = "Maximum Score Possible : " + quizInfo.maxQuizScore.toString()
         start_quiz_button.setOnClickListener {
             val intent = Intent(this, QuizActivity::class.java)
-            //val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
             val string = quizInfo.quizName
             intent.putExtra("QuizAct", string)
             quizName = string
             startActivity(intent)
             finish()
         }
+    }
+
+    private fun getData(quiz: String): Int {
+        val sharedPreferences = getSharedPreferences("testScores", Context.MODE_PRIVATE)
+        return sharedPreferences.getInt(quiz, 0)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

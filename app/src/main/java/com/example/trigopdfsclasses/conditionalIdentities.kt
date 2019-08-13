@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.
 class conditionalIdentities : AppCompatActivity() {
     val currScore = 0
     val quizName = "Conditional Identities"
-    val maxScore = 20
+    val maxScore = 9
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +23,13 @@ class conditionalIdentities : AppCompatActivity() {
 
         ratios_and_functions_quiz.setOnClickListener {
             val intent = Intent(this, ConfirmQuizActivity::class.java)
-            val quizIntent = QuizInfoClass("Conditional Identities",currScore,maxScore)
+            val quizIntent = QuizInfoClass(quizName,currScore,maxScore)
             intent.putExtra("QuizInfo",quizIntent)
             startActivity(intent)
         }
     }
+
+
     private fun getData(quiz: String): Int {
         val sharedPreferences = getSharedPreferences("testScores", Context.MODE_PRIVATE)
         return sharedPreferences.getInt(quiz, 0)

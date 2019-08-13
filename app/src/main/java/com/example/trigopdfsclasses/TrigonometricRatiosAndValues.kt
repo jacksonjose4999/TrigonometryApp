@@ -13,11 +13,12 @@ class TrigonometricRatiosAndValues : AppCompatActivity() {
 
     val currScore = 0
     val quizName = "Trigonometric Ratio's values"
-    val maxScore = 20
+    val maxScore = 8
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trigonometric_rations_values)
+        textView.text = textView.text.toString() + getData(quizName)+"/"+maxScore
 
         values_quiz.setOnClickListener {
             val intent = Intent(this, ConfirmQuizActivity::class.java)
@@ -26,6 +27,8 @@ class TrigonometricRatiosAndValues : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
     private fun getData(quiz: String): Int {
         val sharedPreferences = getSharedPreferences("testScores", Context.MODE_PRIVATE)
         return sharedPreferences.getInt(quiz, 0)

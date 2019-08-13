@@ -10,7 +10,7 @@
 
 
     <TextView
-            android:text="Current Score : 12"
+            android:text="Current Score : "
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:background="@drawable/options_button_style"
