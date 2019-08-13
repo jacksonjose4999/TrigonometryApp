@@ -8,7 +8,7 @@
 
     <TextView android:layout_width="0dp" android:layout_height="50dp"
               android:textSize="24dp"
-              android:text="Current Highest Score : 12" android:gravity="center" android:paddingTop="10dp"
+              android:text="Current Highest Score : " android:gravity="center" android:paddingTop="10dp"
               android:paddingRight="10dp"
               android:textStyle="italic"
               android:background="@drawable/options_button_style"

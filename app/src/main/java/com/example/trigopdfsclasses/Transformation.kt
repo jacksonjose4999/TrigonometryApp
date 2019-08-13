@@ -1,5 +1,6 @@
 package com.example.trigopdfsclasses
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -24,5 +25,9 @@ class Transformation : AppCompatActivity() {
             intent.putExtra("QuizInfo",quizIntent)
             startActivity(intent)
         }
+    }
+    private fun getData(quiz: String): Int {
+        val sharedPreferences = getSharedPreferences("testScores", Context.MODE_PRIVATE)
+        return sharedPreferences.getInt(quiz, 0)
     }
 }
