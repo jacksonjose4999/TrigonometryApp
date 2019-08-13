@@ -94,22 +94,22 @@
                 android:text="not defined"
                 style="@style/OptionButtonStyle"
                 android:id="@+id/option_1"
-                android:fontFamily="sans-serif-medium" android:capitalize="none"/>
+                android:fontFamily="sans-serif-medium"/>
         <Button
                 android:text="0"
                 style="@style/OptionButtonStyle"
-                android:capitalize="none"
-                android:id="@+id/option_2" android:fontFamily="sans-serif-medium"/>
+                android:id="@+id/option_2"
+                android:fontFamily="sans-serif-medium"/>
         <Button
                 android:text="1"
                 style="@style/OptionButtonStyle"
-                android:capitalize="none"
-                android:id="@+id/option_3" android:fontFamily="sans-serif-medium"/>
+                android:id="@+id/option_3"
+                android:fontFamily="sans-serif-medium"/>
         <Button
                 android:text="-1"
-                android:capitalize="none"
                 style="@style/OptionButtonStyle"
-                android:id="@+id/option_4" android:fontFamily="sans-serif-medium"/>
+                android:id="@+id/option_4"
+                android:fontFamily="sans-serif-medium"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
