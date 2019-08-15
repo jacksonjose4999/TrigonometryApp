@@ -10,8 +10,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name="com.example.trigopdfsclasses.Transformation">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
         </activity>
         <activity android:name="com.example.trigopdfsclasses.DoubleTripleHalf">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".MainActivity"/>
         </activity>
         <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions">
             <meta-data
