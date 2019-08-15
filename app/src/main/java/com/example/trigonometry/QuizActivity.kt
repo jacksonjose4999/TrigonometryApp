@@ -238,13 +238,13 @@ class Quiz (quizName: String){
         this.quizName = quizName
         when(quizName) {
             "Trigonometric Ratio's values" -> {
-                questionsArray.add(Questions("Value of sin(0)", "1", "0", "-1", "-1",2))
-                questionsArray.add(Questions("Value of cos(0)", "1", "0", "-1", "-1",1))
-                questionsArray.add(Questions("Value of tan(90)", "1", "not defined", "-1", "-1",2))
+                questionsArray.add(Questions("Value of sin(0)", "1", "0", "-1", "1/2",2))
+                questionsArray.add(Questions("Value of cos(0)", "1", "0", "-1", "-1/2",1))
+                questionsArray.add(Questions("Value of tan(90)", "1", "not defined", "-1", "-1/2",2))
                 questionsArray.add(Questions("Value of sin(30)", "1/2", "0", "1", "-1",1))
-                questionsArray.add(Questions("Value of cot(0)", "not defined", "0", "-1", "-1",1))
-                questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "-1",2))
-                questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "-1",1))
+                questionsArray.add(Questions("Value of cot(0)", "not defined", "0", "-1", "-1/2",1))
+                questionsArray.add(Questions("Value of tan(0)", "1", "0", "-1", "-1/2",2))
+                questionsArray.add(Questions("Value of cosec(90)", "1", "not defined", "-1", "-1/2",1))
                 questionsArray.add(Questions("Value of sec(30)", "1/2", "0", "2/√3", "-1",3))
             }
             "Basic Trigonometric Formulas" -> {

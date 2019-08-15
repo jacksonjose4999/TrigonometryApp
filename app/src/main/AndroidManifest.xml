@@ -9,58 +9,70 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="com.example.trigopdfsclasses.Transformation">
+        <activity android:name="com.example.trigopdfsclasses.Transformation"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name="com.example.trigopdfsclasses.DoubleTripleHalf">
+        <activity android:name="com.example.trigopdfsclasses.DoubleTripleHalf"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions">
+        <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndFunctions"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".QuizActivity">
+        <activity android:name=".QuizActivity"
+                  android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.example.trigopdfsclasses.AdditionSubtractionFormulas">
+        <activity android:name="com.example.trigopdfsclasses.AdditionSubtractionFormulas"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".ShowResult">
+        <activity android:name=".ShowResult"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".ConfirmQuizActivity">
+        <activity android:name=".ConfirmQuizActivity"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>        </activity>
-        <activity android:name="com.example.trigopdfsclasses.BasicTrigonometricFormulas">
+        <activity android:name="com.example.trigopdfsclasses.BasicTrigonometricFormulas"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name="com.example.trigopdfsclasses.conditionalIdentities">
+        <activity android:name="com.example.trigopdfsclasses.conditionalIdentities"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name="com.example.trigopdfsclasses.TrigoEquationsAndGeneralValues">
+        <activity android:name="com.example.trigopdfsclasses.TrigoEquationsAndGeneralValues"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndValues">
+        <activity android:name="com.example.trigopdfsclasses.TrigonometricRatiosAndValues"
+                  android:screenOrientation="portrait">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value=".MainActivity"/>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
