@@ -1,4 +1,4 @@
-package com.example.trigonometry
+package com.trigonometryapp.trigonometry
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

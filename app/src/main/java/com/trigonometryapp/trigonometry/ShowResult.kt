@@ -1,12 +1,11 @@
-package com.example.trigonometry
+package com.trigonometryapp.trigonometry
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.trigonometry.QuizActivity.Companion.quizQ
+import com.trigonometryapp.trigonometry.QuizActivity.Companion.quizQ
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder

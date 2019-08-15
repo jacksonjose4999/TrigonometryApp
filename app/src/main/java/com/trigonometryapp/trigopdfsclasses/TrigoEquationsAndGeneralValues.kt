@@ -1,13 +1,12 @@
-package com.example.trigopdfsclasses
+package com.trigonometryapp.trigopdfsclasses
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.trigonometry.ConfirmQuizActivity
-import com.example.trigonometry.QuizInfoClass
-import com.example.trigonometry.R
-import kotlinx.android.synthetic.main.activity_trigonometric_rations_values.*
+import com.trigonometryapp.trigonometry.ConfirmQuizActivity
+import com.trigonometryapp.trigonometry.QuizInfoClass
+import com.trigonometryapp.trigonometry.R
 import kotlinx.android.synthetic.main.activity_trigonometry_ratios_and_funtions.*
 
 class TrigoEquationsAndGeneralValues : AppCompatActivity() {

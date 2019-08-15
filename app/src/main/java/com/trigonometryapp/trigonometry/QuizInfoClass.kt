@@ -1,4 +1,4 @@
-package com.example.trigonometry
+package com.trigonometryapp.trigonometry
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

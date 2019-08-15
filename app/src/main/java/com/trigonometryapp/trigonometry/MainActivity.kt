@@ -1,10 +1,10 @@
-package com.example.trigonometry
+package com.trigonometryapp.trigonometry
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.trigopdfsclasses.*
+import com.trigonometryapp.trigopdfsclasses.*
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder

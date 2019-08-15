@@ -1,4 +1,4 @@
-package com.example.trigonometry
+package com.trigonometryapp.trigonometry
 
 import org.junit.Test
 
