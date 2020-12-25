@@ -8,7 +8,7 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_confirm_quiz.*
 
 class ConfirmQuizActivity : AppCompatActivity() {
-    companion object{
+    companion object {
         var quizName = ""
     }
 
@@ -18,7 +18,8 @@ class ConfirmQuizActivity : AppCompatActivity() {
         val quizInfo = intent.getParcelableExtra<QuizInfoClass>("QuizInfo")
 
         quiz_topic_view.text = quizInfo.quizName
-        current_score_view.text = "Current Score : " + quizInfo.currQuizScore.toString()+getData(quizInfo.quizName)
+        current_score_view.text =
+            "Current Score : " + quizInfo.currQuizScore.toString() + getData(quizInfo.quizName)
         max_score_view.text = "Maximum Score Possible : " + quizInfo.maxQuizScore.toString()
         start_quiz_button.setOnClickListener {
             val intent = Intent(this, QuizActivity::class.java)

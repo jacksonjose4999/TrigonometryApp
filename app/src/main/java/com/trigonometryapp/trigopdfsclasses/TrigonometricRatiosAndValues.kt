@@ -18,12 +18,12 @@ class TrigonometricRatiosAndValues : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trigonometric_rations_values)
-        textView.text = textView.text.toString() + getData(quizName)+"/"+maxScore
+        textView.text = textView.text.toString() + getData(quizName) + "/" + maxScore
 
         values_quiz.setOnClickListener {
             val intent = Intent(this, ConfirmQuizActivity::class.java)
             val quizInfo = QuizInfoClass(quizName, currScore, maxScore)
-            intent.putExtra("QuizInfo",quizInfo)
+            intent.putExtra("QuizInfo", quizInfo)
             startActivity(intent)
         }
     }

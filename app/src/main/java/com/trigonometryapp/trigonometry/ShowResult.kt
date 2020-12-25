@@ -33,29 +33,30 @@ class ShowResult : AppCompatActivity() {
     }
 
     private fun getTotalScore() {
-        for (i in 0 until userAnswers.size){
-            if (userAnswers[i] == quizQ!!.questionsArray[i].ans){
+        for (i in 0 until userAnswers.size) {
+            if (userAnswers[i] == quizQ!!.questionsArray[i].ans) {
                 totalScore++
             }
         }
-        Log.wtf("ScoreScore","the totals Score is si $totalScore")
+        Log.wtf("ScoreScore", "the totals Score is si $totalScore")
     }
 
 
     private fun store() {
-        total_score_view.text = total_score_view.text.toString()+" $totalScore/${userAnswers.size}"
-        if (quizQ == null){
+        total_score_view.text =
+            total_score_view.text.toString() + " $totalScore/${userAnswers.size}"
+        if (quizQ == null) {
             return
         }
 
-        if  (testScore(quizQ?.quizName) < totalScore!!){
+        if (testScore(quizQ?.quizName) < totalScore!!) {
             saveData(quizQ?.quizName!!)
         }
         totalScore = 0
     }
 
-    private fun addResultItemsToRecyclerView(){
-        for ((index,i) in userAnswers.withIndex()) {
+    private fun addResultItemsToRecyclerView() {
+        for ((index, i) in userAnswers.withIndex()) {
             val resultItem = ResultItem(i, index)
             adapter.add(resultItem)
         }
@@ -72,7 +73,7 @@ class ShowResult : AppCompatActivity() {
     private fun saveData(quiz: String) {
         val sharedPreferences = getSharedPreferences("testScores", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.putInt(quiz, totalScore!!)
+        editor.putInt(quiz, totalScore)
         editor.apply()
     }
 
@@ -81,12 +82,8 @@ class ShowResult : AppCompatActivity() {
         return sharedPreferences.getInt(quiz, 0)
     }
 
-
-
-
-
-    class ResultItem(private val userAnswer : Int, private val index: Int) : Item<ViewHolder>(){
-        companion object{
+    class ResultItem(private val userAnswer: Int, private val index: Int) : Item<ViewHolder>() {
+        companion object {
             var ts = 0
         }
 
@@ -98,29 +95,37 @@ class ShowResult : AppCompatActivity() {
             val yourAnswerText = "Your Answer: "
             viewHolder.itemView.question_view_result_item.text = quizQ!!.questionsArray[index].ques
             when (userAnswer) {
-                1 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op1
-                2 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op2
-                3 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op3
-                4 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+quizQ!!.questionsArray[index].op4
-                0 -> viewHolder.itemView.your_answer_result.text = yourAnswerText+"No answer selected"
+                1 -> viewHolder.itemView.your_answer_result.text =
+                    yourAnswerText + quizQ!!.questionsArray[index].op1
+                2 -> viewHolder.itemView.your_answer_result.text =
+                    yourAnswerText + quizQ!!.questionsArray[index].op2
+                3 -> viewHolder.itemView.your_answer_result.text =
+                    yourAnswerText + quizQ!!.questionsArray[index].op3
+                4 -> viewHolder.itemView.your_answer_result.text =
+                    yourAnswerText + quizQ!!.questionsArray[index].op4
+                0 -> viewHolder.itemView.your_answer_result.text =
+                    yourAnswerText + "No answer selected"
             }
-            if (userAnswer == quizQ!!.questionsArray[index].ans){
+            if (userAnswer == quizQ!!.questionsArray[index].ans) {
                 viewHolder.itemView.result_imageView.setImageResource(R.drawable.checkedhaiye)
                 ts++
-                Log.wtf("scoreme","ts is ${ts}")
+                Log.wtf("scoreme", "ts is ${ts}")
                 // store()
-            }
-            else if (userAnswer != quizQ!!.questionsArray[index].ans){
-                if(userAnswer == 0) viewHolder.itemView.result_imageView.setImageResource(R.drawable.warning)
+            } else if (userAnswer != quizQ!!.questionsArray[index].ans) {
+                if (userAnswer == 0) viewHolder.itemView.result_imageView.setImageResource(R.drawable.warning)
                 else viewHolder.itemView.result_imageView.setImageResource(R.drawable.cancelhiaye)
             }
             val correctAnswerText = "Correct Answer: "
 
             when {
-                quizQ!!.questionsArray[index].ans == 1 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op1
-                quizQ!!.questionsArray[index].ans == 2 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op2
-                quizQ!!.questionsArray[index].ans == 3 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op3
-                quizQ!!.questionsArray[index].ans == 4 -> viewHolder.itemView.correct_answer_text_view.text = correctAnswerText+quizQ!!.questionsArray[index].op3
+                quizQ!!.questionsArray[index].ans == 1 -> viewHolder.itemView.correct_answer_text_view.text =
+                    correctAnswerText + quizQ!!.questionsArray[index].op1
+                quizQ!!.questionsArray[index].ans == 2 -> viewHolder.itemView.correct_answer_text_view.text =
+                    correctAnswerText + quizQ!!.questionsArray[index].op2
+                quizQ!!.questionsArray[index].ans == 3 -> viewHolder.itemView.correct_answer_text_view.text =
+                    correctAnswerText + quizQ!!.questionsArray[index].op3
+                quizQ!!.questionsArray[index].ans == 4 -> viewHolder.itemView.correct_answer_text_view.text =
+                    correctAnswerText + quizQ!!.questionsArray[index].op3
             }
             //viewHolder.itemView.correct_answer_text_view.setBackgroundColor(Color.GREEN)
 

@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         addItemsToRecyclerHome(adapter)
 
         adapter.setOnItemClickListener { item, view ->
-            when(view.item_title.text.toString()){
+            when (view.item_title.text.toString()) {
                 "Trigonometric Ratios and Functions" -> {
                     val intent = Intent(this, TrigonometricRatiosAndFunctions::class.java)
                     startActivity(intent)
@@ -62,21 +62,51 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun addItemsToRecyclerHome(adapter : GroupAdapter<ViewHolder>){
-        adapter.add(ActivitiesItem("Trigonometric Ratios and Functions","Basic formulas"))
-        adapter.add(ActivitiesItem("Values of Trigonometric Ratios","Table of Trigonometric Standard Angles"))
+    fun addItemsToRecyclerHome(adapter: GroupAdapter<ViewHolder>) {
+        adapter.add(ActivitiesItem("Trigonometric Ratios and Functions", "Basic formulas"))
+        adapter.add(
+            ActivitiesItem(
+                "Values of Trigonometric Ratios",
+                "Table of Trigonometric Standard Angles"
+            )
+        )
         adapter.add(ActivitiesItem("Basic Trigonometric Functions", "Basic definitions"))
-        adapter.add(ActivitiesItem("Addition and Subtraction Functions","The formulas with addition or subtraction in their angles"))
-        adapter.add(ActivitiesItem("Trigonometric Ratios and general Values","Basic Trigonometric equations"))
-        adapter.add(ActivitiesItem("Conditional Identities","The formulas with addition or subtraction in their angles"))
-        adapter.add(ActivitiesItem("Transformation Formulae", "Formulas to transform product into sum and vice versa"))
-        adapter.add(ActivitiesItem("Double, Triple and Half Angle Formulae", " Formulae to manipulate angles"))
+        adapter.add(
+            ActivitiesItem(
+                "Addition and Subtraction Functions",
+                "The formulas with addition or subtraction in their angles"
+            )
+        )
+        adapter.add(
+            ActivitiesItem(
+                "Trigonometric Ratios and general Values",
+                "Basic Trigonometric equations"
+            )
+        )
+        adapter.add(
+            ActivitiesItem(
+                "Conditional Identities",
+                "The formulas with addition or subtraction in their angles"
+            )
+        )
+        adapter.add(
+            ActivitiesItem(
+                "Transformation Formulae",
+                "Formulas to transform product into sum and vice versa"
+            )
+        )
+        adapter.add(
+            ActivitiesItem(
+                "Double, Triple and Half Angle Formulae",
+                " Formulae to manipulate angles"
+            )
+        )
     }
 
 
 }
 
-class ActivitiesItem(val title: String, val dis: String) : Item<ViewHolder>(){
+class ActivitiesItem(val title: String, val dis: String) : Item<ViewHolder>() {
     override fun getLayout(): Int {
         return R.layout.home_recycler_view_item
     }

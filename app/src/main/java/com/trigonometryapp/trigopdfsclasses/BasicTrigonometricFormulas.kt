@@ -17,13 +17,14 @@ class BasicTrigonometricFormulas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trigonometry_ratios_and_funtions)
-        textView2.text = textView2.text.toString() + getData(quizName)+"/"+maxQuizScore
+        textView2.text = textView2.text.toString() + getData(quizName) + "/" + maxQuizScore
 
         pdf_view_ratios_functions.fromAsset("basic_formulas.pdf").load()
 
         ratios_and_functions_quiz.setOnClickListener {
             val intent = Intent(this, ConfirmQuizActivity::class.java)
-            intent.putExtra("QuizInfo",
+            intent.putExtra(
+                "QuizInfo",
                 QuizInfoClass(
                     quizName = quizName,
                     currQuizScore = currQuizScore,
@@ -33,7 +34,6 @@ class BasicTrigonometricFormulas : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
 
 
     private fun getData(quiz: String): Int {
